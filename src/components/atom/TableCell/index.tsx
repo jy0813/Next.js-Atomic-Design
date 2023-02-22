@@ -1,9 +1,4 @@
-import React, {ReactNode} from 'react';
-
-interface ITd {
-  children?:ReactNode
-  text?:string | number;
-}
+import {ITd} from "@/atoms/tableState";
 
 export default function TableCell({children, text}:ITd) {
   return (

@@ -1,10 +1,4 @@
-import {ReactNode} from "react";
-
-interface ITh {
-  children?:ReactNode
-  text?:string | number;
-}
-
+import {ITh} from "@/atoms/tableState";
 
 export default function TableHeaderCell({children, text}:ITh) {
   return (
