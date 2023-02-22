@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Next.js-Atomic-Design.iml" filepath="$PROJECT_DIR$/Next.js-Atomic-Design.iml" />
       <module fileurl="file://$PROJECT_DIR$/../nexjs-atomic.iml" filepath="$PROJECT_DIR$/../nexjs-atomic.iml" />
     </modules>
   </component>
