@@ -1,10 +1,14 @@
-import {ITd} from "@/atoms/tableState";
+import {ReactNode} from "react";
 
-export default function TableCell({children, text}:ITd) {
+export interface ITableCell{
+  children?:ReactNode,
+  header?:boolean;
+}
+export const TableCell = ({children, header}:ITableCell) => {
+  const TableCell = header ? 'th' : 'td';
   return (
-      <td>
-        {text}
-        {children}
-      </td>
-  );
+    <TableCell>
+      {children}
+    </TableCell>
+  )
 }
