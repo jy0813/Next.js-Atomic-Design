@@ -4,15 +4,18 @@ import {TableRow} from "@/components/atom/TableRow";
 import {TableCell} from "@/components/atom/TableCell";
 import {ReactNode} from "react";
 
-export interface ITable {
-  children:ReactNode;
+export interface ITable<T> {
   className?: string;
+  data:T[];
+  columns:string[];
+  renderRow: (item: T, index: number) => ReactNode;
 }
 
-export const Table = ({children, className}:ITable) => {
+export const Table = <T extends unknown>({className, columns, data, renderRow}:ITable<T>) => {
   return(
       <table className={`table${className ? `${className}` : ''}`}>
-        {children}
+        <Table.Thead columns={columns}/>
+        <Table.Tbody data={data} renderRow={renderRow}/>
       </table>
   )
 }
