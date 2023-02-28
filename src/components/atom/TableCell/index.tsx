@@ -1,4 +1,5 @@
 import {ReactNode} from "react";
+import styles from './index.module.css';
 
 export interface ITableCell{
   children?:ReactNode,
@@ -7,7 +8,7 @@ export interface ITableCell{
 export const TableCell = ({children, header}:ITableCell) => {
   const TableCell = header ? 'th' : 'td';
   return (
-    <TableCell>
+    <TableCell className={styles.cell}>
       {children}
     </TableCell>
   )

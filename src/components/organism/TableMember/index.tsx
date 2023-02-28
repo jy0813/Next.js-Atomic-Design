@@ -3,36 +3,36 @@ import {Table} from "@/components/molecule/Table";
 import {TableRow} from "@/components/atom/TableRow";
 import {TableCell} from "@/components/atom/TableCell";
 
-const dataTitle = ['제목','내용','가격','체크']
+const dataTitle = ['No','이메일','이름','권한','정지']
 
 interface IData {
-  id: number;
-  title: string;
-  body: string;
-  price: number;
+  no: number;
+  email: string;
+  name: string;
+  admin: string;
   isChecked: boolean;
 }
 
 const data: IData[] = [
   {
-    id: 1,
-    title: "Product 1",
-    body: "This is product 1",
-    price: 100,
+    no: 1,
+    email: "test@naver.com",
+    name: "김테스트",
+    admin: '최고관리자',
     isChecked: false,
   },
   {
-    id: 2,
-    title: "Product 2",
-    body: "This is product 2",
-    price: 200,
+    no: 2,
+    email: "test2@naver.com",
+    name: "박테스트",
+    admin: '회원',
     isChecked: true,
   },
   {
-    id: 3,
-    title: "Product 3",
-    body: "This is product 3",
-    price: 300,
+    no: 3,
+    email: "test3@naver.com",
+    name: "이테스트",
+    admin: '최고관리자',
     isChecked: false,
   },
 ];
@@ -41,11 +41,12 @@ const data: IData[] = [
 function TableMember() {
   const renderRow = (item: IData, index: number) => {
     return (
-        <TableRow key={item.id}>
-          <TableCell>{item.title}</TableCell>
-          <TableCell>{item.body}</TableCell>
-          <TableCell>{item.price}</TableCell>
-          <TableCell>{item.isChecked ? 'true' : 'false'}</TableCell>
+        <TableRow key={index}>
+          <TableCell>{item.no}</TableCell>
+          <TableCell>{item.email}</TableCell>
+          <TableCell>{item.name}</TableCell>
+          <TableCell>{item.admin}</TableCell>
+          <TableCell>{item.isChecked ? 'Y' : 'N'}</TableCell>
         </TableRow>
     );
   };

@@ -1,4 +1,5 @@
 import {ReactNode} from "react";
+import styles from './index.module.css';
 
 export interface ITableRow {
   children?:ReactNode;
@@ -7,7 +8,7 @@ export interface ITableRow {
 
 export const TableRow = ({children}:ITableRow) => {
   return (
-      <tr>
+      <tr className={styles.tr}>
         {children}
       </tr>
   )

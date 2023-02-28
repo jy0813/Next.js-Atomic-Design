@@ -1,5 +1,6 @@
 import type { AppProps } from 'next/app'
 import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
+import '@/assets/style/globals.css';
 import {RecoilRoot} from "recoil";
 
 const queryClient = new QueryClient();
